@@ -13,6 +13,7 @@ nav {
 	width: 100%;
 	z-index: 1;
 	background-color: white;
+	opacity: 0.95;
 }
 
 a {
@@ -42,7 +43,7 @@ h1 {
 	font-weight: 500;
 	font-size: 2.5em;
 	text-align: center;
-	margin: 60px 0 50px 0;
+	margin: 10px 0 50px 0;
 	color: #666;
 }
 
@@ -215,7 +216,13 @@ li {
 	align-items: center;
 	max-width:1165px;
 	margin: 0 auto;
-	height: 50px;
+	height: 60px;
+	border-bottom: 1px solid white;
+	box-shadow: 0 1px 5px -1px rgba(0,0,0,.2);
+}
+
+.navBar li {
+	padding: 20px;
 }
 
 .navButtonList {
@@ -269,8 +276,9 @@ li {
   transition-delay: 0s, 0s, 0.3s;
 }
 
-#projects {
+#projects, #recommendations, #contact {
 	text-align: center;
+	padding: 40px 20px;
 }
 
 .projectBox {
