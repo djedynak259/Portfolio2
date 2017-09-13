@@ -24,6 +24,7 @@ p {
 }
 
 h1 {
+  font-family: 'Encode Sans', sans-serif;
 	font-weight: 500;
 	font-size: 2.5em;
 	text-align: center;
@@ -39,7 +40,6 @@ h2 {
 }
 
 h3 {
-	font-family: 'Encode Sans', sans-serif;
 	font-weight: 500;
 	font-size: 20px;
 	margin: 10px;	
@@ -100,12 +100,6 @@ form {
 	position: relative;
 	display: block;
 	text-align: center;
-}
-
-.contentWrap {
-	position: relative;
-	max-width:1165px;
-	margin: 0 auto;
 }
 
 .dropDown {
