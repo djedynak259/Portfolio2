@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Style Changes</title>
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Encode+Sans:400,500" rel="stylesheet">
+
+</head>
+<body onload="load()">
+
+	<div id="loader"></div>
+
+	<div id='allWrap' class="animate-bottom">	
+
+	<nav>
+		<div class="navBar">
+			<div class="navLogoWrap">
+				<div class="logoOverflowCheck">			
+					<div class="logoEffect"></div>
+				</div>	
+				<img src="images/logoSample.png">
+			</div>
+
+			<ul class="navButtonList">
+				<li class="navBtn"><a>Recommendations</a>
+					<div class="logoOverflowCheck">
+						<div class="logoEffect"></div>
+					</div>
+					<ul class="dropDown">
+						<li id='navAlignLeft'><button>Left</button></li>
+						<li id='navAlignRight'><button>Right</button></li>
+					</ul>	
+				</li>
+				<li class="navBtn"><a>Projects</a>
+					<div class="logoOverflowCheck">
+						<div class="logoEffect"></div>
+					</div>
+				</li>
+				<li class="navBtn"><a>Contacts</a>
+					<div class="logoOverflowCheck">
+						<div class="logoEffect"></div>
+					</div>
+				</li>											
+				<li class="navBtn"><a>Styles</a>
+					<div class="logoOverflowCheck">
+						<div class="logoEffect"></div>
+					</div>			
+					<ul class="dropDown">
+						<li><button>One</button></li>
+						<li><button>Two</button></li>
+						<li><button>Three</button></li>
+					</ul>
+				</li>	
+			</ul>
+		</div>	
+	</nav>
+	<div class="mainWrapper">
+		<div class="background">
+
+<!-- 			<div class="introFooter">
+				<p class=""> here is some text that will change later</p>
+				<form class="introFooterForm">
+					<input type="text" name="" placeholder="sample">
+					<input type="text" name="">
+					<input type="submit" name="">
+				</form>
+			</div> -->
+		</div>
+	</div>	
+	<div class="stripes"></div>
+	<div class="contentWrap">
+		<div id="recommendations">
+			<h1>Recommendations</h1>
+			<ul>	
+        <li>
+          <img src="images/zack.jpg">
+          <div class="recomTextWrap">
+            <h3>Senior Front End Engineer at Stitch Labs</h3>
+            <p>Dan has proven himself to be an eager and outgoing learner, spending as much time as he can focusing on improving his skills. He shows a tremendous about of curiosity and creativity for following through at the highest level, ensuring what he works on is done with perfection. There's no slowing down or stopping Dan when he is given a task to complete. I've been fortunate enough to work along side Dan at Stitch Labs and watch him grow as a developer. He has always proven that he understands who he needs to collaborate with and how he can get/give help to others. Dan brings a great aura to the workplace and it has been a pleasure to get to know him!</p>
+            <h4>Zack Rosen</h4>
+          </div>
+      	</li>
+	      <li>
+          <img src="images/sam.jpg">
+          <div class="recomTextWrap">
+            <h3>Support Team Lead at Stitch Labs</h3>
+            <p>I had the privilege to work with Dan as his direct supervisor on the Stitch Support Team. From day one, he brought a passion and a respect to his work. Dan would contiune to never be satisfied with an easy answer, but would time and time again go the extra mile to provide Stitch users with not only the answer they came to him for, but additional insight, understanding and a smile on thier face. I am confident Dan will excel at any job he choses</p>
+            <h4>Samuel Adamson</h4>
+          </div>
+        </li>
+        <li>
+          <img src="images/sara.jpg">
+          <div class="recomTextWrap">
+            <h3>Director of Customer Experience at Stitch Labs</h3>
+            <p>I hired Dan at Stitch Labs and was his senior level manager. Dan's curiosity allowed him to really grow into his role, which required in-depth knowledge of a technical, constantly evolving product. As he learned more and more, he shared that knowledge through writing support articles, creating internal documentation, and helping his teammates with troubleshooting issues. His compassion and empathy for customers drove him to be creative in his solutions, and diligent in his investigations. He was absolutely a pleasure to work with.</p>
+            <h4>Sara Jensen</h4>
+          </div>  
+        </li>
+        <li>
+          <img src="images/tommy.jpg">
+          <div class="recomTextWrap">
+            <h3>Senior Support Specialist at Stitch Labs</h3>
+            <p>Dan was such a great presence in the office. He learns extremely quickly and his ever-curious mind aided in his swift mastery of a very complex program. Dan set out to make an impact from day one. Always happy to offer assistance to customers and colleagues, Dan is a very hard worker, detail-oriented, and a pleasure to work with. He's a constant customer champion, helping to troubleshoot and advocate for bugs and feature enhancements that both help the customer and improve the program overall. Danj (as we called him) created multiple tools that will continue to help the Support team for a long time to come. Both technically savvy and great with customers, I cannot recommend Dan enough for any company that would be lucky enough to hire him.</p>
+            <h4>Tommy Hopkins</h4>
+          </div>  
+        </li>
+		    <li>
+          <img src="images/dan.jpg">
+          <div class="recomTextWrap">
+            <h3>UI/UX at Stitch Labs</h3>
+            <p>Dan is a fast and eager learner, a thoughtful team player, and importantly a friendly face that you look forward to seeing each day. He is creative, curious, and versatile. Did I mention he has a great first name?</p>
+            <h4>Dan Duett</h4>
+          </div>  
+        </li>
+			</ul>
+		</div>
+			
+		<div id="projects">
+			<h1>Projects</h1>			
+			<div class="projectBox">
+				<div class="projectWrap" id="myModal1">
+          <img alt="" src="images/giphy.png">
+          <div class="projectWrapText">
+            <h2>Giphy Generator</h2>
+            <p>Web app using React and GIHPY API</p>
+					</div>
+				</div>
+			</div>
+			<div id="myModal" class="modal">
+			  <!-- Modal content -->
+			  <div class="modal-content">
+			    <div class="modal-header">
+			      <span class="modal-close">&times;</span>
+			      <h2>Giphy Generator</h2>
+			    </div>
+			    <div class="modal-body">
+			      <p>This web app features the ability to display gifs and their information (accompanied by a sweet swooshing hover effect) based on user search input</p>
+			      <p>Some other text...</p>
+			    </div>
+			    <div class="modal-footer">
+			      <h3><i class="fa fa-tag"></i> React</h3>
+			    </div>
+			  </div>
+			</div>
+
+		</div>
+
+		<div class="contact">
+			<h1>Contact</h1>
+			<form id='form' onsubmit='return validate()'>
+				<label>Your Name</label> 
+				<input id='name' type="text" name="name" required>
+				<label>Email</label>
+				<input type="email" name="email">
+				<label>Message</label>
+				<textarea rows='3'></textarea>
+				<input class='submit' type="submit" name="submit">
+			</form>
+			<div id="errorMsg"></div>
+			<a href="mailto:dajed259@gmail.com?Subject=I%20saw%20your%20portfolio" target="_blank">send me an email</a>
+		</div>
+		<div id="social">
+      <ul>
+        <li>
+        	<a href="https://www.linkedin.com/in/dan-jedynak-15944278" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </li>
+        <li>
+        	<a href="https://github.com/djedynak259" target="_blank"><i class="fa fa-github"></i></a>
+        </li>
+      </ul>
+    </div>   
+	</div>	
+
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/61c259333a.js"></script>  
+
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>
