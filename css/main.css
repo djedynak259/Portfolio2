@@ -22,6 +22,8 @@ a {
 	outline: none;
 	font-family: 'Encode Sans', sans-serif;
 	font-weight: 400;
+	transition: all .5s ease;
+	opacity: 1;
 }
 
 a:hover {
@@ -92,20 +94,30 @@ li {
 .button {
 	padding: 1em 1.5em;
 	display: inline-block;
-	border: 1px solid #D1D1D1;
+	border: 2px solid #D1D1D1;
 	border-radius: 5px;
+	border-color: #2A3A3F;
+	transition: all 0.25s ease;
 }
 
 .button:hover {
-	transform: scale(1.025);
-	transition: all 0.25s ease;
+	transform: scale(1.05);
 }
+
+.button:blur {}
+
 
 .contact {
 	position: relative;
 	display: block;
 	text-align: center;
-	padding: 30px;
+	padding: 70px 0;
+	background-color: rgb(242, 242, 242);
+}
+
+.contact h3 {
+	margin: 40px 0;
+	font-size: 2em;
 }
 
 .dropDown {
@@ -319,21 +331,32 @@ li {
 	padding-left: 20px;
 }
 
+#social {
+	background-color: #2A3A3F;
+	padding-top: 30px;
+}
+
+#social a {
+	font-size: 36px;
+	color: rgb(242, 242, 242);
+	padding: 2px;
+}
+
+#social p {
+	color: white;
+	text-align: center;
+	color: rgb(242, 242, 242);
+}
+
 #social ul {
 	margin: 0;
 	padding: 0;
 	display: flex;
 	justify-content: center;
-	background-color: #191919;
 }
 
 #social li {
-	padding: 15px;
-}
-
-#social a {
-	font-size: 30px;
-	color: #fff;
+	padding: 30px 18px 50px 18px;
 }
 
 .stripes {
