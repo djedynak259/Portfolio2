@@ -85,7 +85,7 @@ li {
 	background: url(../images/bg1.jpg) no-repeat top center / 100%;
 	background-size: cover;
 	position: relative;
-	height: 900px;
+	height: 700px;
 	z-index: -1;
 }
 
@@ -121,25 +121,9 @@ li {
   transition: all .3s ease-in-out 0s;
 }
 
-/*.introFooter {
-	position: absolute;
-	background: rgba(24,142,86,0.74);
-	height: 70px;
-	width: 100%;
-	bottom: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.introFooterForm input {
-	line-height: 20px;
-	position: relative;
-}*/
-
 .mainWrapper {
 	position: relative;
-	margin-top: 74px;
+	margin-top: 50px;
 }
 
 /*Modal*/
@@ -212,34 +196,20 @@ li {
     color: white;
 }
 
-
 .navBar{
 	position: relative;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	max-width:1165px;
 	margin: 0 auto;
-}
-
-.navBar a {
-	padding: 10px 16px 10px 10px;
+	height: 50px;
 }
 
 .navButtonList {
 	display: flex;
 	margin: 0;
 	padding: 0;
-}
-
-.navLogoWrap img{
-	height: 70px;
-	margin: 0 60px 0 0;
-}
-
-.navLogoWrap:hover .logoEffect{
-	transition: all 1.8s ease;
-	left:200px;
 }
 
 .logoOverflowCheck {
@@ -256,9 +226,9 @@ li {
 	pointer-events: none;
 	background: linear-gradient(90deg, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 48%, white 50%, rgba(255,255,255,1) 52%,rgba(255,255,255,0) 100%);
 	position: absolute;
-	left: -200px;	
+	left: -160px;	
 	height: inherit;
-	width: 200px;
+	width: 160px;
 }
 
 .navBtn{
@@ -277,7 +247,7 @@ li {
 
 .navBtn:hover .logoEffect{
 	transition: all 2s ease;
-	left:200px;
+	left:160px;
 }
 
 .navBtn:hover .dropDown{
@@ -408,6 +378,7 @@ li {
 /* Add animation to "page content" */
 .animate-bottom {
   position: relative;
+  /*top: -20px;*/
   -webkit-animation-name: animatebottom;
   -webkit-animation-duration: 2s;
   animation-name: animatebottom;
@@ -420,8 +391,8 @@ li {
 }
 
 @keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
+  from{ top:50px; opacity:0 } 
+  to{ top:0px; opacity:1 }
 }
 
 
