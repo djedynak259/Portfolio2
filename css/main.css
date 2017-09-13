@@ -94,6 +94,7 @@ form {
 	background-size: cover;
 	position: relative;
 	height: 900px;
+	z-index: -1;
 }
 
 .contact {
@@ -369,6 +370,7 @@ form {
 	height: 900px;
 	transform: skewY(-6deg);
   transform-origin: 0;
+  z-index: -1;
 }
 
 /*experiemtal loader code*/
