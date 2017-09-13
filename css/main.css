@@ -114,6 +114,7 @@ li {
 	text-align: center;
 	padding: 70px 0;
 	background-color: rgb(242, 242, 242);
+	padding: 72px 0 102px 0;
 }
 
 .contact h3 {
@@ -160,13 +161,36 @@ li {
     background-color: #fefefe;
     margin: auto;
     padding: 0;
-    border: 1px solid #888;
+    border: 0px solid #888;
     width: 80%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s
+}
+
+.modal-content h2, 
+.modal-content h4 {
+	color: #fff
+}
+
+.modal-content h4 {
+	display: inline-block;
+	font-size: 16px;
+	margin: 10px 0;
+}
+
+.modal-content img {
+	height: 360px;
+	border-radius: 5px;
+	margin-top: 12px;
+}
+
+.modal-content p {
+	text-align: left;
+	margin: 0;
+	padding: 20px 16px;
 }
 
 /* Add Animation */
@@ -197,16 +221,24 @@ li {
 
 .modal-header {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #2A3A3F;
     color: white;
 }
 
-.modal-body {padding: 2px 16px;}
+.modal-body {
+	padding: 0 16px;
+	background-color: rgb(242, 242, 242);
+}
 
 .modal-footer {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #2A3A3F;
     color: white;
+    text-align: left;
+}
+
+.modal-footer h3 {
+	display: inline-block;
 }
 
 .navBar{
@@ -276,7 +308,7 @@ li {
   transition-delay: 0s, 0s, 0.3s;
 }
 
-#projects, #recommendations, #contact {
+#projects, #recommendations {
 	text-align: center;
 	padding: 40px 20px;
 }
@@ -341,7 +373,7 @@ li {
 
 #social {
 	background-color: #2A3A3F;
-	padding-top: 30px;
+	padding: 30px 0;
 }
 
 #social a {
@@ -364,7 +396,7 @@ li {
 }
 
 #social li {
-	padding: 30px 18px 50px 18px;
+	padding: 18px 18px 18px 18px;
 }
 
 .stripes {
