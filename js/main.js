@@ -1,12 +1,17 @@
 // Loader
 
-function load() {
-    let myVar = setTimeout(showPage, 0050);
-}
+// function load() {
+//     let myVar = setTimeout(showPage, 0050);
+// }
+
+window.addEventListener('load', function loaded(){
+	window.removeEventListener('load',loaded,false)
+	showPage()
+})
 
 function showPage() {
   document.getElementById("loader").style.display = "none";
-  document.getElementById("allWrap").style.display = "block";
+  document.getElementById("allWrap").style.visibility = "visible";
 }
 
 
