@@ -1,9 +1,5 @@
 // Loader
 
-// function load() {
-//     let myVar = setTimeout(showPage, 0050);
-// }
-
 window.addEventListener('load', function loaded(){
 	window.removeEventListener('load',loaded,false)
 	showPage()
@@ -28,9 +24,21 @@ function showPage() {
 // 	el.style.animationName= 'navFlexRight';
 // })
 
-document.getElementsByClassName('navBtn')[0].addEventListener('click',function(){
-	let el = document.getElementsByClassName('contentWrap')[0];
-	el.scrollIntoView(true);
+
+// Button Zooming
+document.getElementsByClassName('navBtn')[0].addEventListener('click',function(event){
+	let reccommendations = document.getElementById('recommendations');
+		reccommendations.scrollIntoView(true);
+})
+
+document.getElementsByClassName('navBtn')[1].addEventListener('click',function(event){
+	let projects = document.getElementById('projects');
+		projects.scrollIntoView(true);
+})
+
+document.getElementsByClassName('navBtn')[2].addEventListener('click',function(event){
+	let contact = document.getElementById('contact');
+		contact.scrollIntoView(true);
 })
 
 
@@ -62,39 +70,3 @@ window.onclick = function(event) {
     }
 }
 // Modal  End
-
-!function(){
-
-	function get(url){
-		return new Promise(function(succeed,fail){
-			var xhr = new XMLHttpRequest();
-			xhr.open('get',url,true);
-			xhr.addEventListener('load',function(){
-				if(xhr.status < 400){
-					succeed(xhr.responseText)
-				} else fail(new Error('reQuest failed ' + xhr.statusText))
-			})
-			xhr.addEventListener('fail', function(){
-				fail(new Error('Network error'))
-			})
-			xhr.send(null)
-		})
-	}
-
-	let url = 'http://api.giphy.com/v1/gifs/search?q=ryan&api_key=a5c163ee9c29473580e365c6cc226a99&limit=6';
-
-	get(url).then(function(text) {
-		  console.log(JSON.parse(text));
-		}, function(error) {
-		  console.log("Failed to fetch data.txt: " + error);
-	})
-
-
-	// var xhr = new XMLHttpRequest();
-	// xhr.open('get',`http://api.giphy.com/v1/gifs/search?q=ryan&api_key=a5c163ee9c29473580e365c6cc226a99&limit=6`, false);
-	// xhr.addEventListener('load',function(){
-	// 		console.log(JSON.parse(xhr.response), xhr.status)
-	// })
-	// xhr.send(null);
-
-}();

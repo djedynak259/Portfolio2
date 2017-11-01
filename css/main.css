@@ -109,10 +109,10 @@ li {
 	transform: scale(1.05);
 }
 
-.button:blur {}
+/*.button:blur {}*/
 
 
-.contact {
+#contact {
 	position: relative;
 	display: block;
 	text-align: center;
@@ -121,7 +121,7 @@ li {
 	padding: 72px 0 102px 0;
 }
 
-.contact h3 {
+#contact h3 {
 	margin: 40px 0;
 	font-size: 2em;
 }
@@ -166,7 +166,7 @@ li {
     margin: auto;
     padding: 0;
     border: 0px solid #888;
-    width: 80%;
+    max-width: 600px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -186,7 +186,7 @@ li {
 }
 
 .modal-content img {
-	height: 360px;
+	width: 100%;
 	border-radius: 5px;
 	margin-top: 12px;
 }
@@ -211,7 +211,6 @@ li {
 /* The Close Button */
 .modal-close {
     color: white;
-    float: right;
     font-size: 28px;
     font-weight: bold;
 }
@@ -239,10 +238,16 @@ li {
     background-color: #2A3A3F;
     color: white;
     text-align: left;
+    display: flex;
+    justify-content: space-between;
 }
 
 .modal-footer h3 {
 	display: inline-block;
+}
+
+.modal-footer a {
+
 }
 
 .navBar{
@@ -329,12 +334,18 @@ li {
 
 .projectWrap {
 	display: inline-block;
-	border: 1px solid black;
 	border-radius: 5px 5px;
+	background-color: #fff;
+	transition: all .3s ease-in-out 0s;
+}
+
+.projectWrap:hover {
+	transform: scale(1.025);
+
 }
 
 .projectWrap img {
-	height: 240px;
+	height: 270px;
 	padding: 20px;
 }
 
@@ -355,6 +366,7 @@ li {
 
 #recommendations ul {
 	padding: 0;
+	margin: 0 auto;
 	max-width: 1165px;
 }
 
