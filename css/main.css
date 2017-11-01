@@ -14,6 +14,7 @@ nav {
 	z-index: 1;
 	background-color: white;
 	opacity: 0.95;
+	box-shadow: 0 1px 5px -1px rgba(0,0,0,.2);
 }
 
 a {
@@ -139,6 +140,25 @@ li {
   transition: all .3s ease-in-out 0s;
 }
 
+.logoOverflowCheck {
+	overflow-x:hidden;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+.logoEffect {
+	pointer-events: none;
+	background: linear-gradient(90deg, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 48%, white 50%, rgba(255,255,255,1) 52%,rgba(255,255,255,0) 100%);
+	position: absolute;
+	left: -160px;	
+	height: inherit;
+	width: 160px;
+}
+
 .mainWrapper {
 	position: relative;
 	margin-top: 61px;
@@ -254,41 +274,18 @@ li {
 	position: relative;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	max-width:1165px;
-	margin: 0 auto;
-	height: 60px;
-	border-bottom: 1px solid white;
-	box-shadow: 0 1px 5px -1px rgba(0,0,0,.2);
+	width: 100%;
 }
 
-.navBar li {
+.navButtonList li {
 	padding: 20px;
 }
 
 .navButtonList {
 	display: flex;
+	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
-}
-
-.logoOverflowCheck {
-	overflow-x:hidden;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	cursor: pointer;
-}
-
-.logoEffect {
-	pointer-events: none;
-	background: linear-gradient(90deg, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 48%, white 50%, rgba(255,255,255,1) 52%,rgba(255,255,255,0) 100%);
-	position: absolute;
-	left: -160px;	
-	height: inherit;
-	width: 160px;
 }
 
 .navBtn{
