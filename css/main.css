@@ -246,9 +246,15 @@ li {
     font-weight: bold;
 }
 
+.modal-footer .modal-close.button {
+	border:none;
+	padding: 0;
+	margin: 0;
+}
+
 .modal-close:hover,
 .modal-close:focus {
-    color: #000;
+    color: var(--main-gray);
     text-decoration: none;
     cursor: pointer;
 }
