@@ -41,6 +41,11 @@ document.getElementsByClassName('navBtn')[2].addEventListener('click',function(e
 		contact.scrollIntoView(true);
 })
 
+document.getElementsByClassName('navBtn')[2].addEventListener('click',function(event){
+	let contact = document.getElementById('contact');
+		contact.scrollIntoView(true);
+})
+
 
 // Modal  
 
