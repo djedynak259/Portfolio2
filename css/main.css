@@ -44,6 +44,15 @@ p {
 	font-weight: 300;
 }
 
+img {
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
 h1 {
   font-family: 'Encode Sans', sans-serif;
 	font-weight: 500;
@@ -207,12 +216,6 @@ li {
 	color: var(--white);
 }
 
-.modal-footer h4 {
-	line-height: 25px;
-	font-size: 18px;
-	margin: 10px 8px;
-}
-
 .modal-content img {
 	width: 100%;
 	border-radius: 5px;
@@ -265,17 +268,32 @@ li {
     padding: 2px 16px;
     background-color: var(--dark-gray);
     color: white;
-    text-align: left;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .modal-footer h3 {
 	display: inline-block;
 }
 
-.modal-footer a {
+.modal-footer h4 {
+	line-height: 35px;
+	font-size: 18px;
+	margin: 10px 8px;
+}
 
+.modal-footer .button {
+	border-color: var(--white);
+	font-size: 16px;
+	margin-right: 10px;
+	padding: 10px 18px;
+}
+
+.modal-footer i {
+	font-size: 10px;
+	display: inline-block;
+	font-size: 22px;
 }
 
 .navBar{
@@ -330,6 +348,11 @@ li {
 #projects {
 	 background: url(../images/space2.jpg) no-repeat fixed center center / cover;
 }
+	
+
+#projects h1 {
+	color: var(--white);
+}
 
 .projectBox {
 	display: flex;
@@ -342,6 +365,7 @@ li {
 	border-radius: 5px 5px;
 	background-color: var(--white);
 	transition: all .3s ease-in-out 0s;
+	cursor: pointer;
 }
 
 .projectWrap:hover {
