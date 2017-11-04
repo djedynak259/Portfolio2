@@ -18,6 +18,7 @@ nav {
 	width: 100%;
 	z-index: 1;
 	opacity: 0.95;
+	transition: all ease .3s;
 }
 
 a {
@@ -106,7 +107,7 @@ li {
 	background: url(../images/dancover.jpg) no-repeat top center / 100%;
 	background-size: cover;
 	position: relative;
-	height: 700px;
+	height: 1000px;
 	z-index: -1;
 }
 
@@ -445,7 +446,7 @@ li {
 	width: 100%;
 	background: linear-gradient(to bottom, white 20%, rgb(242, 242, 242) 50%, white);
 	height: 900px;
-	transform: skewY(-6deg);
+	transform: skewY(-4deg);
   transform-origin: 0;
   z-index: -1;
 }
