@@ -31,19 +31,32 @@ document.getElementsByClassName('navBtn')[0].addEventListener('click',function(e
 		reccommendations.scrollIntoView(true);
 })
 
-document.getElementsByClassName('navBtn')[1].addEventListener('click',function(event){
-	let projects = document.getElementById('projects');
+document.getElementsByClassName('navBtn')[2].addEventListener('click',function(event){
+	let aboutMe = document.getElementById('aboutMe');
 		projects.scrollIntoView(true);
 })
 
-document.getElementsByClassName('navBtn')[2].addEventListener('click',function(event){
+document.getElementsByClassName('navBtn')[3].addEventListener('click',function(event){
+	let contact = document.getElementById('projects');
+		contact.scrollIntoView(true);
+})
+
+document.getElementsByClassName('navBtn')[4].addEventListener('click',function(event){
 	let contact = document.getElementById('contact');
 		contact.scrollIntoView(true);
 })
 
-document.getElementsByClassName('navBtn')[2].addEventListener('click',function(event){
-	let contact = document.getElementById('contact');
-		contact.scrollIntoView(true);
+// Scroll Nav
+var nav = document.getElementsByTagName('nav')[0];
+window.addEventListener('scroll', function (){
+	if(document.body.scrollTop >= 10 || document.documentElement.scrollTop >= 10) {
+		nav.classList.add("navScrolled")
+		console.log('add')
+	}
+  else {
+    nav.classList.remove("navScrolled");
+    console.log('srem')
+	}
 })
 
 

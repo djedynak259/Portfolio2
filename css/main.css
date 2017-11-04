@@ -17,9 +17,7 @@ nav {
 	top: 0;
 	width: 100%;
 	z-index: 1;
-	background-color: white;
 	opacity: 0.95;
-	box-shadow: 0 1px 5px -1px rgba(0,0,0,.2);
 }
 
 a {
@@ -31,6 +29,7 @@ a {
 	font-weight: 400;
 	transition: all .5s ease;
 	opacity: 1;
+	color: var(--main-gray);
 }
 
 a:hover {
@@ -178,7 +177,6 @@ li {
 
 .mainImageWrapper {
 	position: relative;
-	margin-top: 61px;
 }
 
 /*Modal*/
@@ -240,24 +238,6 @@ li {
 }
 
 /* The Close Button */
-.modal-close {
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.modal-footer .modal-close.button {
-	border:none;
-	padding: 0;
-	margin: 0;
-}
-
-.modal-close:hover,
-.modal-close:focus {
-    color: var(--main-gray);
-    text-decoration: none;
-    cursor: pointer;
-}
 
 .modal-header {
     padding: 2px 16px;
@@ -279,6 +259,14 @@ li {
     align-items: center;
 }
 
+.modal-footer .button {
+	border: none;
+	background-color: var(--white);
+	font-size: 16px;
+	margin-left: 10px;
+	padding: 10px 18px;
+}
+
 .modal-footer h3 {
 	display: inline-block;
 }
@@ -287,13 +275,6 @@ li {
 	line-height: 35px;
 	font-size: 18px;
 	margin: 10px 8px;
-}
-
-.modal-footer .button {
-	border-color: var(--white);
-	font-size: 16px;
-	margin-right: 10px;
-	padding: 10px 18px;
 }
 
 .modal-footer i {
@@ -325,7 +306,6 @@ li {
 	z-index: 1;
 	transition: all 0.3s ease-in-out 0s, visibility 0.3s linear 0.3s, z-index 0s linear 0.01s;
 	flex: 0 0 auto;
-	background-color: white;
 }
 
 .navBtn a {
@@ -344,6 +324,12 @@ li {
 	visibility: visible;
 	transform: translateY(0%);
   transition-delay: 0s, 0s, 0.3s;
+}
+
+.navScrolled {
+	background-color: var(--white);
+	box-shadow: 0 1px 5px -1px rgba(0,0,0,.2);
+	transition: all ease 1s;
 }
 
 #projects, #recommendations {
