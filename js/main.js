@@ -68,20 +68,20 @@ console.log(sliders)
 window.addEventListener('scroll', function(){
 	sliders.forEach(elem =>{
 		let e = elem.getBoundingClientRect()
-		// console.log(e)
-		let slideHeight = (window.scrollY + window.innerHeight) - e.height / 2;
+		console.log(e, window.scrollY+ window.innerHeight)
+		let slideHeight = (window.scrollY + window.innerHeight)- 200 - e.height / 2;
 		let elemBottom = e.bottom;
 
 		let isHalf = slideHeight > e.top;
 		let isNotPast = window.scrollY < elemBottom;
 
 		if(isHalf && isNotPast) {
-			elem.classList.add('active')
-			console.log('add')
+			elem.classList.remove('slideAway')
+			// console.log('add')
 		}
 		else {
-			elem.classList.remove('active')
-			console.log('remove')
+			elem.classList.add('slideAway')
+			// console.log('remove')
 		}
 
 	})
