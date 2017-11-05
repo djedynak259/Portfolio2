@@ -103,8 +103,16 @@ li {
 	visibility:hidden;
 }
 
-.slideAway {
-	background-color: blue;
+.slide-in {
+	transition: all ease .5s
+}
+
+.slide-up {
+	transform: translateY(20px) scale(.96);
+}
+
+.slide-down {
+	transform: translateY(-10px) scale(.98);	
 }
 
 .background	{
