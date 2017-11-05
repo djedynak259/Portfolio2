@@ -18,7 +18,8 @@ nav {
 	width: 100%;
 	z-index: 1;
 	opacity: 0.95;
-	transition: all ease .3s;
+	transition: color linear .3s, background-color linear .3s, box-shadow linear .3s;
+	color: var(--white);
 }
 
 a {
@@ -30,7 +31,6 @@ a {
 	font-weight: 400;
 	transition: all .5s ease;
 	opacity: 1;
-	color: var(--main-gray);
 }
 
 a:hover {
@@ -107,7 +107,7 @@ li {
 	background: url(../images/dancover.jpg) no-repeat top center / 100%;
 	background-size: cover;
 	position: relative;
-	height: 1000px;
+	height: calc(100vh + 80px);
 	z-index: -1;
 }
 
@@ -137,6 +137,10 @@ li {
 	padding: 70px 0;
 	background-color: rgb(242, 242, 242);
 	padding: 72px 0 102px 0;
+}
+
+#contact a{
+	color: var(--main-gray);
 }
 
 #contact h3 {
@@ -260,6 +264,10 @@ li {
     align-items: center;
 }
 
+.modal-footer a {
+	color: var(--main-gray);
+}
+
 .modal-footer .button {
 	border: none;
 	background-color: var(--white);
@@ -291,10 +299,6 @@ li {
 	width: 100%;
 }
 
-.navButtonList li {
-	padding: 20px;
-}
-
 .navButtonList {
 	display: flex;
 	flex-wrap: wrap;
@@ -307,30 +311,22 @@ li {
 	z-index: 1;
 	transition: all 0.3s ease-in-out 0s, visibility 0.3s linear 0.3s, z-index 0s linear 0.01s;
 	flex: 0 0 auto;
+	padding: 16px;
 }
 
 .navBtn a {
 	position: relative;
-	/*padding-bottom: 50px;*/
-	/*padding-top: 40px;*/
 }
 
-.navBtn:hover .logoEffect{
-	transition: all 2s ease;
+.scrolled .navBtn:hover .logoEffect{
+	transition: all 1.4s ease;
 	left:160px;
 }
 
-.navBtn:hover .dropDown{
-	opacity: 1;
-	visibility: visible;
-	transform: translateY(0%);
-  transition-delay: 0s, 0s, 0.3s;
-}
-
 .navScrolled {
+	color: var(--main-gray);
 	background-color: var(--white);
 	box-shadow: 0 1px 5px -1px rgba(0,0,0,.2);
-	transition: all ease 1s;
 }
 
 #projects, #recommendations {
@@ -369,10 +365,6 @@ li {
 .projectWrap img {
 	height: 270px;
 	padding: 20px;
-}
-
-.projectWrapText {
-
 }
 
 .projectWrapText h2 {

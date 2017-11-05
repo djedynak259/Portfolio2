@@ -48,15 +48,28 @@ document.getElementsByClassName('navBtn')[4].addEventListener('click',function(e
 
 // Scroll Nav
 var nav = document.getElementsByTagName('nav')[0];
+var navList = document.getElementsByClassName('navButtonList')[0]
 window.addEventListener('scroll', function (){
 	if(document.body.scrollTop >= 10 || document.documentElement.scrollTop >= 10) {
 		nav.classList.add("navScrolled")
-		console.log('add')
+		navList.classList.add("scrolled")
 	}
   else {
     nav.classList.remove("navScrolled");
-    console.log('srem')
+  	navList.classList.remove("scrolled")  
 	}
+})
+
+// Slide In
+
+let sliders = document.getElementsByClassName('slide-in');
+
+window.addEventListener('scroll', function(e){
+	sliders.forEach(e =>{
+		let slideHeight = (window.scrollY + window.innerHeight) - e.height / 2;
+		let imageBottom = e.offsetTop + e.height;
+		
+	})
 })
 
 
