@@ -62,13 +62,28 @@ window.addEventListener('scroll', function (){
 
 // Slide In
 
-let sliders = document.getElementsByClassName('slide-in');
+let sliders = document.querySelectorAll('.slide-in');
+console.log(sliders)
 
-window.addEventListener('scroll', function(e){
-	sliders.forEach(e =>{
+window.addEventListener('scroll', function(){
+	sliders.forEach(elem =>{
+		let e = elem.getBoundingClientRect()
+		// console.log(e)
 		let slideHeight = (window.scrollY + window.innerHeight) - e.height / 2;
-		let imageBottom = e.offsetTop + e.height;
-		
+		let elemBottom = e.bottom;
+
+		let isHalf = slideHeight > e.top;
+		let isNotPast = window.scrollY < elemBottom;
+
+		if(isHalf && isNotPast) {
+			elem.classList.add('active')
+			console.log('add')
+		}
+		else {
+			elem.classList.remove('active')
+			console.log('remove')
+		}
+
 	})
 })
 

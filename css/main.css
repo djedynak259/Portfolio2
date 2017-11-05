@@ -103,6 +103,10 @@ li {
 	visibility:hidden;
 }
 
+.active {
+	background-color: blue;
+}
+
 .background	{
 	background: url(../images/dancover.jpg) no-repeat top center / 100%;
 	background-size: cover;
