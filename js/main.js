@@ -73,11 +73,11 @@ function checkScrollThings(){
 
 		if(slideHeight > e.top && e.bottom > 60) {
 			elem.classList.remove('slide-up')
-			elem.classList.remove('slide-down')
+			// elem.classList.remove('slide-down')
 		}
 
 		if(e.bottom < 60){
-			elem.classList.add('slide-down')
+			// elem.classList.add('slide-down')
 		}
 	})
 
