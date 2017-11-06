@@ -51,6 +51,7 @@ function debounce(func, wait = 10, immediate = true) {
 };
 
 function checkScrollThings(){
+	// Nav
 	if(document.body.scrollTop >= 10 || document.documentElement.scrollTop >= 10) {
 		nav.classList.add("navScrolled")
 		navList.classList.add("scrolled")
@@ -60,7 +61,8 @@ function checkScrollThings(){
   	navList.classList.remove("scrolled")  
 	}
 
-	sliders.forEach(elem =>{
+	// Slide
+	sliders.forEach(elem => {
 		let e = elem.getBoundingClientRect()
 		
 		let slideHeight = (window.innerHeight) - 20;
@@ -78,11 +80,26 @@ function checkScrollThings(){
 			elem.classList.add('slide-down')
 		}
 	})
+
+	let projectRect = projectHeading[0].getBoundingClientRect()
+
+	if(projectRect.top < window.innerHeight/1.5){
+		projects.forEach(elem => {
+			elem.classList.remove('smaller')
+		})
+	} else {
+		projects.forEach(elem => {
+			elem.classList.add('smaller')
+		})
+	}
+
 }
 
 let nav = document.getElementsByTagName('nav')[0];
 let navList = document.getElementsByClassName('navButtonList')[0]
 let sliders = document.querySelectorAll('.slide-in');
+let projects = document.querySelectorAll('.projectWrap');
+let projectHeading = document.querySelectorAll('#projects');
 
 window.addEventListener('scroll', debounce(checkScrollThings))
 

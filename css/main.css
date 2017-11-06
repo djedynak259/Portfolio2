@@ -104,11 +104,11 @@ li {
 }
 
 .slide-in {
-	transition: all ease .5s
+	transition: all ease .6s
 }
 
 .slide-up {
-	transform: translateY(20px) scale(.96);
+	transform: translateY(30px) scale(.96);
 }
 
 .slide-down {
@@ -357,8 +357,10 @@ li {
 
 .projectBox {
 	display: flex;
+	flex-wrap: wrap;
 	width: 900px;
 	margin: 0 auto;
+	justify-content: space-between;
 }
 
 .projectWrap {
@@ -367,6 +369,8 @@ li {
 	background-color: var(--white);
 	transition: all .3s ease-in-out 0s;
 	cursor: pointer;
+	transition: all ease 1s;
+	margin-bottom: 50px;
 }
 
 .projectWrap:hover {
@@ -375,7 +379,7 @@ li {
 }
 
 .projectWrap img {
-	height: 270px;
+	height: 250px;
 	padding: 20px;
 }
 
@@ -415,6 +419,10 @@ li {
 	flex-wrap: wrap;
 	max-width: calc(100% - 114px);
 	padding-left: 16px;
+}
+
+.smaller {
+	transform: scale(.4);
 }
 
 #social {
