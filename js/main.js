@@ -11,7 +11,7 @@ function showPage() {
 }
 
 
-// Button GoTo
+// Nav Button Go-To Section
 
 document.getElementsByClassName('navBtn')[0].addEventListener('click',function(event){
 	let reccommendations = document.getElementById('recommendations');
@@ -33,6 +33,7 @@ document.getElementsByClassName('navBtn')[4].addEventListener('click',function(e
 		contact.scrollIntoView(true);
 })
 
+
 // Scroll Effects
 
 function debounce(func, wait = 10, immediate = true) {
@@ -50,7 +51,8 @@ function debounce(func, wait = 10, immediate = true) {
 	};
 };
 
-function checkScrollThings(){
+function scrollEffects(){
+
 	// Nav
 	if(document.body.scrollTop >= 10 || document.documentElement.scrollTop >= 10) {
 		nav.classList.add("navScrolled")
@@ -101,61 +103,39 @@ let sliders = document.querySelectorAll('.slide-in');
 let projects = document.querySelectorAll('.projectWrap');
 let projectHeading = document.querySelectorAll('#projects');
 
-window.addEventListener('scroll', debounce(checkScrollThings))
+window.addEventListener('scroll', debounce(scrollEffects))
 
 
-// Modal  
+// Modal Actions
 
 let projectBox = document.getElementsByClassName('projectBox')[0];
 
 projectBox.addEventListener('click',function(e){
 
 	let btn = e.target.closest('div')
-	console.log(e.target)
+	let openModal = document.querySelectorAll('.openModal');
+	var modal1 = document.getElementById("myModal1");	
+	var modal2 = document.getElementById("myModal2");
+	var modal3 = document.getElementById("myModal3");
+	var modal4 = document.getElementById("myModal4");
 
-	var one = document.getElementById("myModal1");	
-	var two = document.getElementById("myModal2");
-	var three = document.getElementById("myModal3");
-	var four = document.getElementById("myModal4");
-
-	if(btn.id === 'openModal1'){
-		
-		one.style.display = 'block';
-	}
-	if(btn.id === 'openModal2'){
-
-		two.style.display = 'block';
-	}	
-	if(btn.id === 'openModal3'){
-		
-		three.style.display = 'block';
-	}
-	if(btn.id === 'openModal4'){
-		
-		four.style.display = 'block';
+	let modalObj = {
+		modal1:modal1,
+		modal2:modal2,
+		modal3:modal3,
+		modal4:modal4
 	}
 
-	if(e.target.classList.contains('modal-close' || e.target.classList.contains('modal'))){
+	for(let i=1;i<=openModal.length;i++){
+		if(btn.id === `openModal${i}`){
+			modalObj[`modal${i}`].style.display = 'block'
+		}
+	}
+
+	if(e.target.classList.contains('modal-close') || e.target.classList.contains('modal')){
 		var modalClosers = document.querySelectorAll(".modal-close");
-		modalClosers.forEach(e=>{
-			one.style.display = 'none';
-			two.style.display = 'none';
-			three.style.display = 'none';
-			four.style.display = 'none';
+		modalClosers.forEach((e,i)=>{
+			modalObj[`modal${i+1}`].style.display = 'none';
 		})
 	}
-
-	let openModal = document.querySelectorAll('.openModal');
-	let modals = document.getElementsByClassName('modal');
-
-	// console.log(openModal)
-
-	// openModal.forEach((e,i)=>{
-	// 	console.log(e)
-	// 	if(e.classList.contains('openModal')){
-	// 		modals[i].style.display = 'block'
-	// 	}
-	// })
-
-
 })
