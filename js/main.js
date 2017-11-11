@@ -111,13 +111,12 @@ let projectBox = document.getElementsByClassName('projectBox')[0];
 projectBox.addEventListener('click',function(e){
 
 	let btn = e.target.closest('div')
+	console.log(e.target)
 
 	var one = document.getElementById("myModal1");	
 	var two = document.getElementById("myModal2");
 	var three = document.getElementById("myModal3");
 	var four = document.getElementById("myModal4");
-
-	console.log(btn)
 
 	if(btn.id === 'openModal1'){
 		
@@ -136,14 +135,15 @@ projectBox.addEventListener('click',function(e){
 		four.style.display = 'block';
 	}
 
-	var modalClosers = document.querySelectorAll(".modal-close");
-	modalClosers.forEach(e=>{
-		one.style.display = 'none';
-		two.style.display = 'none';
-		three.style.display = 'none';
-		four.style.display = 'none';
-	})
-
+	if(e.target.classList.contains('modal-close' || e.target.classList.contains('modal'))){
+		var modalClosers = document.querySelectorAll(".modal-close");
+		modalClosers.forEach(e=>{
+			one.style.display = 'none';
+			two.style.display = 'none';
+			three.style.display = 'none';
+			four.style.display = 'none';
+		})
+	}
 
 	let openModal = document.querySelectorAll('.openModal');
 	let modals = document.getElementsByClassName('modal');
@@ -159,12 +159,3 @@ projectBox.addEventListener('click',function(e){
 
 
 })
-
-// Get the modal
-var modal1 = document.getElementById('myModal1');
-
-window.onclick = function(event) {
-    if (event.target == modal1) {
-        modal1.style.display = "none";
-    }
-}
