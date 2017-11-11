@@ -106,24 +106,65 @@ window.addEventListener('scroll', debounce(checkScrollThings))
 
 // Modal  
 
+let projectBox = document.getElementsByClassName('projectBox')[0];
+
+projectBox.addEventListener('click',function(e){
+
+	let btn = e.target.closest('div')
+
+	var one = document.getElementById("myModal1");	
+	var two = document.getElementById("myModal2");
+	var three = document.getElementById("myModal3");
+	var four = document.getElementById("myModal4");
+
+	console.log(btn)
+
+	if(btn.id === 'openModal1'){
+		
+		one.style.display = 'block';
+	}
+	if(btn.id === 'openModal2'){
+
+		two.style.display = 'block';
+	}	
+	if(btn.id === 'openModal3'){
+		
+		three.style.display = 'block';
+	}
+	if(btn.id === 'openModal4'){
+		
+		four.style.display = 'block';
+	}
+
+	var modalClosers = document.querySelectorAll(".modal-close");
+	modalClosers.forEach(e=>{
+		one.style.display = 'none';
+		two.style.display = 'none';
+		three.style.display = 'none';
+		four.style.display = 'none';
+	})
+
+
+	let openModal = document.querySelectorAll('.openModal');
+	let modals = document.getElementsByClassName('modal');
+
+	// console.log(openModal)
+
+	// openModal.forEach((e,i)=>{
+	// 	console.log(e)
+	// 	if(e.classList.contains('openModal')){
+	// 		modals[i].style.display = 'block'
+	// 	}
+	// })
+
+
+})
+
 // Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("myModal1");
-
-var close = document.getElementsByClassName("modal-close")[0];
-
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-close.onclick = function() {
-    modal.style.display = "none";
-}
+var modal1 = document.getElementById('myModal1');
 
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == modal1) {
+        modal1.style.display = "none";
     }
 }

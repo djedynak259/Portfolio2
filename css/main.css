@@ -3,6 +3,7 @@
 	--lighter-gray: #888;
 	--dark-gray: #2A3A3F;
 	--white:#fff;
+	--shirt-blue:#3496F0;
 }
 
 body{
@@ -140,7 +141,7 @@ li {
 }
 
 #contact a{
-	color: var(--main-gray);
+	color: var(--shirt-blue);
 }
 
 #contact h3 {
