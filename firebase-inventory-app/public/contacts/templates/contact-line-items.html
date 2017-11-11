@@ -1,0 +1,6 @@
+<div class='tableLine' ng-repeat="contact in dataset">
+	<p class='col-xs-4'>{{ contact.name }}</p>
+	<p class='col-xs-4'>{{ contact.email }}</p>
+	<p class='col-xs-4'>{{ contact.address }}</p>
+	<button ng-click="showContactDeleteModal(contact)">X</button>
+</div>
