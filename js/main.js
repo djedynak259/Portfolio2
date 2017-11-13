@@ -18,17 +18,17 @@ document.getElementsByClassName('navBtn')[0].addEventListener('click',function(e
 		reccommendations.scrollIntoView(true);
 })
 
-document.getElementsByClassName('navBtn')[2].addEventListener('click',function(event){
-	let aboutMe = document.getElementById('aboutMe');
-		projects.scrollIntoView(true);
+document.getElementsByClassName('navBtn')[1].addEventListener('click',function(event){
+	let aboutMe = document.getElementById('projects');
+		aboutMe.scrollIntoView(true);
 })
 
-document.getElementsByClassName('navBtn')[3].addEventListener('click',function(event){
+document.getElementsByClassName('navBtn')[2].addEventListener('click',function(event){
 	let contact = document.getElementById('projects');
 		contact.scrollIntoView(true);
 })
 
-document.getElementsByClassName('navBtn')[4].addEventListener('click',function(event){
+document.getElementsByClassName('navBtn')[3].addEventListener('click',function(event){
 	let contact = document.getElementById('contact');
 		contact.scrollIntoView(true);
 })

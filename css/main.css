@@ -61,6 +61,8 @@ h1 {
 	text-align: center;
 	margin: 10px 0 50px 0;
 	color: var(--main-gray);
+	letter-spacing: 3px;
+	text-transform: uppercase;
 }
 
 h2 {
@@ -185,6 +187,30 @@ li {
 	position: relative;
 }
 
+.mainImageWrapper .titleText {
+	position: absolute;
+	top: calc(90vh / 2);
+	text-align: center;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.titleText h1 {
+	font-size: 4em;
+	letter-spacing: 7px;
+	color: var(--white);
+	margin-bottom: 40px;
+}
+
+.titleText h3 {
+	font-size: 1.3em;
+	letter-spacing: 5px;
+	color: var(--white);
+	font-weight: 100;
+	text-transform: uppercase;
+}
+
 /*Modal*/
 
 .modal {
@@ -307,16 +333,22 @@ li {
 	padding: 0;
 }
 
+.navButtonList .navBtn:hover {
+	color: var(--shirt-blue);
+}
+
 .navBtn{
 	position: relative;
 	z-index: 1;
-	transition: all 0.3s ease-in-out 0s, visibility 0.3s linear 0.3s, z-index 0s linear 0.01s;
+	transition: color 0s linear, visibility 0.3s linear 0.3s, z-index 0s linear 0.01s;
 	flex: 0 0 auto;
 	padding: 16px;
 }
 
 .navBtn a {
 	position: relative;
+	letter-spacing: 2px;
+	font-size: 1em;
 }
 
 .scrolled .navBtn:hover .logoEffect{
