@@ -288,6 +288,7 @@ li {
     background-color: var(--dark-gray);
     color: white;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
