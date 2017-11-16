@@ -13,12 +13,12 @@ function showPage() {
 
 // Nav Button Go-To Section
 
-document.getElementsByClassName('navBtn')[0].addEventListener('click',function(event){
+document.getElementsByClassName('navBtn')[1].addEventListener('click',function(event){
 	let reccommendations = document.getElementById('recommendations');
 		reccommendations.scrollIntoView(true);
 })
 
-document.getElementsByClassName('navBtn')[1].addEventListener('click',function(event){
+document.getElementsByClassName('navBtn')[2].addEventListener('click',function(event){
 	let aboutMe = document.getElementById('projects');
 		aboutMe.scrollIntoView(true);
 })
@@ -31,6 +31,16 @@ document.getElementsByClassName('navBtn')[2].addEventListener('click',function(e
 document.getElementsByClassName('navBtn')[3].addEventListener('click',function(event){
 	let contact = document.getElementById('contact');
 		contact.scrollIntoView(true);
+})
+
+document.getElementsByClassName('navMobile')[0].addEventListener('click',function(event){
+	let nav = document.getElementsByClassName('navButtonList')[0]
+	if(nav.style.display === 'block'){
+		nav.style.display = 'none'	
+	}
+	else {
+		nav.style.display = 'block'	
+	}
 })
 
 

@@ -352,6 +352,12 @@ li {
 	font-size: 1em;
 }
 
+.navMobile {
+	display: none;
+	text-align: center;
+	font-size: 30px;
+}
+
 .scrolled .navBtn:hover .logoEffect{
 	transition: all 1.4s ease;
 	left:160px;
@@ -414,6 +420,7 @@ li {
 #recommendations h4 {
 	text-align: left;
 	margin: 8px 0;
+	line-height: 20px;
 }
 
 #recommendations ul {
@@ -438,11 +445,10 @@ li {
 }
 
 .recomTextWrap {
-	flex: 0 0 auto;
+	flex: 0 1 auto;
 	flex-wrap: wrap;
 	max-width: calc(100% - 130px);
 	padding-left: 16px;
-	min-width:360px;
 }
 
 .slide-in {
@@ -551,15 +557,32 @@ li {
 @media screen and (max-width:550px) {
 	#recommendations li {
 		justify-content: center;
-	}
-	.recomTextWrap {
 		padding: 0;
 	}
+	.recomTextWrap {
+		padding: 0 20px;
+		max-width: 100%;
+	}
+	.navMobile{
+		display: block;
+	}
+	.navButtonList {
+		display: none;
+		flex-direction: column;
+		text-align: center;
+	}
+	.navBar {
+		flex-direction: column;
+	}
+
 }
 
 @media screen and (max-width:460px) {
 	 h1 {
-		font-size: 2em;
+		font-size: 1.7em;
+	}
+	#recommendations h3 {
+		text-align: center;
 	}
 	.titleText h1 {
 		font-size: 3em;
