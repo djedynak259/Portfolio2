@@ -189,7 +189,7 @@ li {
 
 .mainImageWrapper .titleText {
 	position: absolute;
-	top: calc(90vh / 2);
+	top: calc(84vh / 2);
 	text-align: center;
 	left: 0;
 	right: 0;
@@ -200,7 +200,8 @@ li {
 	font-size: 4em;
 	letter-spacing: 7px;
 	color: var(--white);
-	margin-bottom: 40px;
+	margin-bottom: 22px;
+	line-height: 66px;
 }
 
 .titleText h3 {
@@ -379,13 +380,13 @@ li {
 .projectBox {
 	display: flex;
 	flex-wrap: wrap;
-	width: 900px;
+	max-width: 940px;
 	margin: 0 auto;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 .projectWrap {
-	display: inline-block;
+	width: 440px;
 	border-radius: 5px 5px;
 	background-color: var(--white);
 	/*transition: all .3s ease-in-out;*/
@@ -400,8 +401,8 @@ li {
 }
 
 .projectWrap img {
-	height: 250px;
 	padding: 20px;
+	width: calc(100% - 40px);
 }
 
 .projectWrapText h2 {
@@ -423,6 +424,7 @@ li {
 
 #recommendations li {
 	display: flex;
+	flex-wrap: wrap;
 	max-width: 800px;
 	margin: 0 auto;
 	padding: 12px;
@@ -432,14 +434,15 @@ li {
 	flex: 0 0 auto;
 	height: 114px;
 	border-radius: 56px;
-	margin-top: 12px;
+	margin: 12px 0;
 }
 
 .recomTextWrap {
 	flex: 0 0 auto;
 	flex-wrap: wrap;
-	max-width: calc(100% - 114px);
+	max-width: calc(100% - 130px);
 	padding-left: 16px;
+	min-width:360px;
 }
 
 .slide-in {
@@ -545,4 +548,26 @@ li {
   to{ top:0px; opacity:1 }
 }
 
+@media screen and (max-width:550px) {
+	#recommendations li {
+		justify-content: center;
+	}
+	.recomTextWrap {
+		padding: 0;
+	}
+}
 
+@media screen and (max-width:460px) {
+	 h1 {
+		font-size: 2em;
+	}
+	.titleText h1 {
+		font-size: 3em;
+	}
+	.titleText h3 {
+		font-size: 1em;
+	}
+/*	.projectWrap {
+		width: 312px;
+	}*/
+}
