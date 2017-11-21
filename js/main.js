@@ -14,21 +14,21 @@ showPage()
 // Nav Button Go-To Section
 
 document.getElementsByClassName('navBtn')[1].addEventListener('click',function(event){
+	var builtIns = document.getElementById('builtIns');
+		builtIns.scrollIntoView({behavior: 'smooth', block: 'start', inline:'nearest'});
+})
+
+document.getElementsByClassName('navBtn')[2].addEventListener('click',function(event){
 	var reccommendations = document.getElementById('recommendations');
 		reccommendations.scrollIntoView({behavior: 'smooth', block: 'start', inline:'nearest'});
 })
 
-document.getElementsByClassName('navBtn')[2].addEventListener('click',function(event){
-	var aboutMe = document.getElementById('projects');
-		aboutMe.scrollIntoView({behavior: 'smooth', block: 'start', inline:'nearest'});
-})
-
-document.getElementsByClassName('navBtn')[2].addEventListener('click',function(event){
-	var contact = document.getElementById('projects');
-		contact.scrollIntoView({behavior: 'smooth', block: 'start', inline:'nearest'});
-})
-
 document.getElementsByClassName('navBtn')[3].addEventListener('click',function(event){
+	var projects = document.getElementById('projects');
+		projects.scrollIntoView({behavior: 'smooth', block: 'start', inline:'nearest'});
+})
+
+document.getElementsByClassName('navBtn')[4].addEventListener('click',function(event){
 	var contact = document.getElementById('contact');
 		contact.scrollIntoView({behavior: 'smooth', block: 'start', inline:'nearest'});
 })
