@@ -149,3 +149,94 @@ projectBox.addEventListener('click',function(e){
 		})
 	}
 })
+
+
+// DropDown Menu
+
+var list = ['', 'Apples', 'Oranges', 'Bananas', 'Pears', 'Strawberries']
+
+var input = document.getElementById('search')
+var divList = document.getElementById('divList')  
+var body = document.getElementsByTagName('body')[0]
+
+input.addEventListener('click', function(event){
+  input.style.borderColor = 'coral'
+  input.style.borderWidth = '3px'
+  var oldDrop = document.getElementsByTagName('select')[0];
+  if(oldDrop !== undefined){
+    divList.removeChild(oldDrop)  
+  }
+
+  console.log('clickon')
+  event.stopPropagation()
+  
+  var dropDown = document.createElement('select');
+  
+  var filterList = list.filter(e=>{
+    return e.includes(input.value)
+  })
+  
+  dropDown.size = list.length
+  
+  if(filterList.length > 0){
+    for (var i=0;i<filterList.length;i++){
+      var option = document.createElement('option')
+      option.text = filterList[i]
+      option.value = filterList[i]
+      option.classList.add('dropFont')
+      dropDown.appendChild(option)
+      divList.style.display = 'block'
+    }   
+  } 
+  else {
+    divList.style.display = 'none'
+  }
+  dropDown.size = filterList.length > 1 ? filterList.length : 2
+  divList.appendChild(dropDown) 
+
+})
+
+body.addEventListener('click', function(event){
+  input.style.borderColor = '#8094A0'
+  input.style.borderWidth = '1px'
+  console.log('clickAway')
+  var oldDrop = document.getElementsByTagName('select')[0];
+  if(oldDrop != undefined){
+    divList.removeChild(oldDrop)  
+    divList.style.display = 'none';
+  }
+})
+
+input.addEventListener('keyup',function(){
+  var oldDrop = document.getElementsByTagName('select')[0];
+  divList.removeChild(oldDrop)  
+  
+  var dropDown = document.createElement('select');
+ 
+  var filterList = list.filter(e=>{
+    return e.toLowerCase().includes(input.value.toLowerCase())
+  })
+  
+  if(filterList.length > 0){
+    for (var i=0;i<filterList.length;i++){
+      var fruit = document.createElement('option')
+      var textNode = document.createTextNode(filterList[i])
+      fruit.appendChild(textNode)
+      fruit.classList.add('dropFont')
+      dropDown.appendChild(fruit)
+    }   
+    dropDown.size = filterList.length > 1 ? filterList.length : 2 
+    divList.style.display = 'block'
+  } 
+  else {
+    divList.style.display = 'none'
+  }
+  divList.appendChild(dropDown)
+
+})
+
+divList.addEventListener('click', function(e){
+  console.log(e)
+  input.value = e.target.value
+  divList.style.display = 'none';  
+})

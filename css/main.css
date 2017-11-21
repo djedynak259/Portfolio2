@@ -130,8 +130,10 @@ li {
 	transform: scale(1.05);
 }
 
-/*.button:blur {}*/
-
+.builtInContainer {
+	max-width: 800px;
+	margin: 0 auto;
+}
 
 #contact {
 	position: relative;
@@ -601,4 +603,55 @@ li {
 	.modal {
 		padding-top: 20px;
 	}
+}
+
+
+
+/*Built Ins*/
+
+#dropMenu {
+	display: inline-block;
+	text-align: left;
+	width: 270px;
+}
+
+.dropFont {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+	line-height: 1.4em;	
+}
+
+#dropMenu input {
+  padding:4px;
+  outline:none;
+  display:inline-block;
+  border:none;
+  border-bottom:1px solid #F8F8F0;
+  border-radius: 0;
+}
+
+#divList {
+  border:1px solid #F8F8F0;
+  border-radius:2px;
+  display:none;
+  background-color: #F7F7F7;
+  box-shadow: 1px 1px 7px #8094A0;
+  width: min-content;
+}
+
+#dropMenu option:hover {
+  background-color: grey;
+}
+
+#dropMenu select {
+  border:none;
+  width:152px;
+  font-size: 1em;
+  line-height: 1.4em;	
+  background-color:inherit;
+}
+
+#dropMenu option{
+  padding:4px;
 }
