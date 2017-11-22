@@ -13,6 +13,13 @@ function showPage() {
 showPage()
 // Nav Button Go-To Section
 
+document.querySelector('.navButtonList').addEventListener('click', function(event){
+	console.log(event.path)
+	if(event.path[1]){
+		console.log('test')
+	}
+})
+
 document.getElementsByClassName('navBtn')[1].addEventListener('click',function(event){
 	var builtIns = document.getElementById('builtIns');
 		builtIns.scrollIntoView({behavior: 'smooth', block: 'start', inline:'nearest'});
@@ -199,7 +206,6 @@ input.addEventListener('click', function(event){
 body.addEventListener('click', function(event){
   input.style.borderColor = '#8094A0'
   input.style.borderWidth = '1px'
-  console.log('clickAway')
   var oldDrop = document.getElementsByTagName('select')[0];
   if(oldDrop != undefined){
     divList.removeChild(oldDrop)  
