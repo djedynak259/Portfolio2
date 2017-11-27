@@ -11,34 +11,21 @@ function showPage() {
 }
 
 showPage()
+
+
 // Nav Button Go-To Section
 
-document.querySelector('.navButtonList').addEventListener('click', function(event){
-	console.log(event.path)
-	if(event.path[1]){
-		console.log('test')
+var sections = document.querySelectorAll('section')
+var navButtons = document.querySelectorAll('.navBtn')
+
+for(var i=1;i<=sections.length;i++){
+	(function (i){
+		navButtons[i].addEventListener('click',function(e){
+			sections[i-1].scrollIntoView({behavior: 'smooth', block: 'start', inline:'nearest'});
+		})
 	}
-})
-
-document.getElementsByClassName('navBtn')[1].addEventListener('click',function(event){
-	var builtIns = document.getElementById('builtIns');
-		builtIns.scrollIntoView({behavior: 'smooth', block: 'start', inline:'nearest'});
-})
-
-document.getElementsByClassName('navBtn')[2].addEventListener('click',function(event){
-	var reccommendations = document.getElementById('recommendations');
-		reccommendations.scrollIntoView({behavior: 'smooth', block: 'start', inline:'nearest'});
-})
-
-document.getElementsByClassName('navBtn')[3].addEventListener('click',function(event){
-	var projects = document.getElementById('projects');
-		projects.scrollIntoView({behavior: 'smooth', block: 'start', inline:'nearest'});
-})
-
-document.getElementsByClassName('navBtn')[4].addEventListener('click',function(event){
-	var contact = document.getElementById('contact');
-		contact.scrollIntoView({behavior: 'smooth', block: 'start', inline:'nearest'});
-})
+	)(i)
+}
 
 document.getElementsByClassName('navMobile')[0].addEventListener('click',function(event){
 	var nav = document.getElementsByClassName('navButtonList')[0]
@@ -80,7 +67,7 @@ function scrollEffects(){
   	navList.classList.remove("scrolled")  
 	}
 
-	// Slide
+	// Slide- IN
 	sliders.forEach(elem => {
 		var e = elem.getBoundingClientRect()
 		
