@@ -233,3 +233,129 @@ divList.addEventListener('click', function(e){
   input.value = e.target.value
   divList.style.display = 'none';  
 })
+
+
+// HangMan
+
+function HangMan (guesses){
+  this.numberOfGuesses = guesses | 8;
+  this.puzzle = [];
+  this.word;
+  this.gameReady = false;
+  this.guesses=[];
+}
+
+function PlaceHolder (value, visible, guessable){
+  this.value = value;
+  this.visible = visible;
+  this.guessable = guessable;
+}
+
+HangMan.prototype.GetWord = function(){
+  var self = this;
+  return new Promise(resolve=>{
+    setTimeout(function(){
+      var word = 'We love Samalampus';
+      for(var i=0;i<word.length;i++){
+        var character = word.toLowerCase().charCodeAt(i)
+        if(character >=97 && character <=122){
+          self.puzzle.push(new PlaceHolder(word[i], false, true)) 
+        } else {
+          self.puzzle.push(new PlaceHolder(word[i], true, false)) 
+        }
+      }
+      self.word = word;
+      resolve(word)
+    }, 1000)
+  })
+}
+
+HangMan.prototype.InitDisplay = function(){
+  var game = document.querySelector('.newGame')  
+  while (game.hasChildNodes()) {
+    game.removeChild(game.lastChild);
+  }
+  
+  var guessLeftContainer = document.createElement('div')
+  var guessLeft = document.createTextNode(`Guesses Left:  ${this.numberOfGuesses}`)
+  guessLeftContainer.append(guessLeft)
+  
+  var guessesContainer = document.createElement('div')
+  var guessed = document.createTextNode(`Guesses: ${this.guesses.join(', ')}`)
+  guessesContainer.append(guessed)
+  
+  var word = document.createElement('ul')
+  for(var i=0;i<this.puzzle.length;i++){
+    var letter = document.createElement('li')
+    var letterTextNode = document.createTextNode(this.puzzle[i].value)
+    letter.append(letterTextNode)
+    if(this.puzzle[i].guessable === true){
+      letter.classList.add('guessable')
+    }
+    if(this.puzzle[i].visible === true){
+      letter.classList.add('visible')  
+    }
+    word.append(letter)
+  }
+  game.append(guessLeftContainer)
+  game.append(guessesContainer)
+  game.append(word)  
+  if(this.gameReady === false){
+    window.addEventListener('keyup',e=>{
+      this.GuessLetter(e.keyCode)
+    })
+    this.gameReady = true;
+  }
+  console.log(this)
+}
+
+HangMan.prototype.CheckWin = function(){
+  if(this.numberOfGuesses === 0){
+    var game = document.querySelector('.newGame')  
+    while (game.hasChildNodes()) {
+      game.removeChild(game.lastChild);
+    }
+    var lose = document.createTextNode('You Lose')
+    game.append(lose)        
+  }
+  for(var i=0;i<this.puzzle.length;i++){
+    if(this.puzzle[i].visible === false){
+      break;
+    }
+    if(i === this.puzzle.length-1) {
+      var game = document.querySelector('.newGame')  
+      var win = document.createTextNode('You Win!')
+      game.append(win)
+    }
+  }
+}
+
+HangMan.prototype.GuessLetter = function(guess){
+  if(this.gameReady === true && guess >=65 && guess <=90){
+    var correctGuess = false;
+    this.guesses.push(String.fromCharCode(guess))
+    for(var i=0;i<this.puzzle.length;i++){
+      var check = this.puzzle[i].value.toUpperCase().charCodeAt(0);
+      if(check === guess){
+        this.puzzle[i].visible = true; 
+        correctGuess = true
+      }  
+    }
+    if(correctGuess === false){
+      this.numberOfGuesses --;
+    }
+    this.InitDisplay();
+    this.CheckWin();
+  }
+}
+
+var newGame;
+var newGameButton = document.querySelector('.newGameButton');
+
+newGameButton.addEventListener('click',function(e){
+  newGame = new HangMan();
+  newGame.GetWord().then(e=>{
+    newGame.InitDisplay()
+  })
+})
+

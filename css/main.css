@@ -633,3 +633,26 @@ section {
 #dropMenu option{
   padding:4px;
 }
+
+
+/*HangMan*/
+
+.hangman li {
+  list-style:none;
+  display:inline-block;
+  height:20px;
+  width: 20px;
+  margin:0 4px;
+  text-align: center;
+  vertical-align: bottom;
+  user-select: none;   
+}
+
+.hangman .guessable {
+  border-bottom: 2px solid black;
+  color:var(--white);
+}
+
+.hangman .visible {
+  color: black;
+}
