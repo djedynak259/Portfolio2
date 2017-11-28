@@ -588,7 +588,6 @@ section {
 /*Built Ins*/
 
 #dropMenu {
-	display: inline-block;
 	text-align: left;
 	width: 270px;
 }
@@ -637,6 +636,10 @@ section {
 
 /*HangMan*/
 
+.hangman {
+	text-align: left;
+}
+
 .hangman li {
   list-style:none;
   display:inline-block;
@@ -645,7 +648,8 @@ section {
   margin:0 4px;
   text-align: center;
   vertical-align: bottom;
-  user-select: none;   
+  user-select: none; 
+  padding: 2px;  
 }
 
 .hangman .guessable {

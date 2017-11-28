@@ -281,7 +281,7 @@ HangMan.prototype.InitDisplay = function(){
   guessLeftContainer.append(guessLeft)
   
   var guessesContainer = document.createElement('div')
-  var guessed = document.createTextNode(`Guesses: ${this.guesses.join(', ')}`)
+  var guessed = document.createTextNode(`Guessed Letters: ${this.guesses.join(', ')}`)
   guessesContainer.append(guessed)
   
   var word = document.createElement('ul')
