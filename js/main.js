@@ -353,6 +353,10 @@ var newGame;
 var newGameButton = document.querySelector('.newGameButton');
 
 newGameButton.addEventListener('click',function(e){
+	var game = document.querySelector('.newGame')  
+  while (game.hasChildNodes()) {
+    game.removeChild(game.lastChild);
+  }
   newGame = new HangMan();
   newGame.GetWord().then(e=>{
     newGame.InitDisplay()
