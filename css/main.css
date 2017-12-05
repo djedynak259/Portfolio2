@@ -126,6 +126,11 @@ section {
 .builtInContainer {
 	max-width: 800px;
 	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+.builtInContainer h3 {
+	margin-left: 0;
 }
 
 #contact {
@@ -542,54 +547,12 @@ section {
   to{ top:0px; opacity:1 }
 }
 
-@media screen and (max-width:550px) {
-	#recommendations li {
-		justify-content: center;
-		padding: 0;
-	}
-	.recomTextWrap {
-		padding: 0 20px;
-		max-width: 100%;
-	}
-	.navMobile{
-		display: block;
-	}
-	.navButtonList {
-		display: none;
-		flex-direction: column;
-		text-align: center;
-	}
-	.navBar {
-		flex-direction: column;
-	}
-
-}
-
-@media screen and (max-width:460px) {
-	 h1 {
-		font-size: 1.7em;
-	}
-	#recommendations h3 {
-		text-align: center;
-	}
-	.titleText h1 {
-		font-size: 3em;
-	}
-	.titleText h3 {
-		font-size: 1em;
-	}
-	.modal {
-		padding-top: 20px;
-	}
-}
-
-
 
 /*Built Ins*/
 
 #dropMenu {
 	text-align: left;
-	width: 270px;
+	min-height: 110px;
 }
 
 .dropFont {
@@ -636,6 +599,12 @@ section {
 
 /*HangMan*/
 
+.newGameButton {
+	font-family: 'Raleway', sans-serif;
+	color:var(--main-gray);
+	padding: 4px 10px;
+}
+
 .hangman {
 	text-align: left;
 }
@@ -659,4 +628,52 @@ section {
 
 .hangman .visible {
   color: black;
+}
+
+/*Sudoku*/
+
+
+
+
+/*@media*/
+
+@media screen and (max-width:630px) {
+	#recommendations li {
+		justify-content: center;
+		padding: 0;
+	}
+	.recomTextWrap {
+		padding: 0 20px;
+		max-width: 100%;
+	}
+	.navMobile{
+		display: block;
+	}
+	.navButtonList {
+		display: none;
+		flex-direction: column;
+		text-align: center;
+	}
+	.navBar {
+		flex-direction: column;
+	}
+
+}
+
+@media screen and (max-width:460px) {
+	 h1 {
+		font-size: 1.7em;
+	}
+	#recommendations h3 {
+		text-align: center;
+	}
+	.titleText h1 {
+		font-size: 3em;
+	}
+	.titleText h3 {
+		font-size: 1em;
+	}
+	.modal {
+		padding-top: 20px;
+	}
 }

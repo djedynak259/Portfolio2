@@ -161,11 +161,9 @@ input.addEventListener('click', function(event){
     divList.removeChild(oldDrop)  
   }
 
-  console.log('clickon')
   event.stopPropagation()
   
-  var dropDown = document.createElement('select');
-  
+  var dropDown = document.createElement('select');  
   var filterList = list.filter(e=>{
     return e.includes(input.value)
   })
@@ -276,11 +274,11 @@ HangMan.prototype.InitDisplay = function(){
     game.removeChild(game.lastChild);
   }
   
-  var guessLeftContainer = document.createElement('div')
+  var guessLeftContainer = document.createElement('p')
   var guessLeft = document.createTextNode(`Guesses Left:  ${this.numberOfGuesses}`)
   guessLeftContainer.append(guessLeft)
   
-  var guessesContainer = document.createElement('div')
+  var guessesContainer = document.createElement('p')
   var guessed = document.createTextNode(`Guessed Letters: ${this.guesses.join(', ')}`)
   guessesContainer.append(guessed)
   
@@ -306,26 +304,29 @@ HangMan.prototype.InitDisplay = function(){
     })
     this.gameReady = true;
   }
-  console.log(this)
 }
 
 HangMan.prototype.CheckWin = function(){
+	var game = document.querySelector('.newGame')  
   if(this.numberOfGuesses === 0){
-    var game = document.querySelector('.newGame')  
     while (game.hasChildNodes()) {
       game.removeChild(game.lastChild);
     }
-    var lose = document.createTextNode('You Lose')
-    game.append(lose)        
+		var displayNode = document.createElement('p')
+		var lose = document.createTextNode('You Lose')
+    game.append(displayNode)
+    displayNode.append(lose) 
   }
   for(var i=0;i<this.puzzle.length;i++){
     if(this.puzzle[i].visible === false){
       break;
     }
     if(i === this.puzzle.length-1) {
-      var game = document.querySelector('.newGame')  
+    	var displayNode = document.createElement('p')
       var win = document.createTextNode('You Win!')
-      game.append(win)
+      game.append(displayNode)
+    	displayNode.append(win) 
+    	this.gameReady = false;
     }
   }
 }
@@ -363,3 +364,35 @@ newGameButton.addEventListener('click',function(e){
   })
 })
 
+
+// Sudoku
+
+function Sudoku() {
+	this.board = [[1,2,1,4,5,6,7,8,9],[],[],[],[],[],[],[],[]];
+}
+
+function SudokuSquare(value) {
+	this.value = value
+}
+
+Sudoku.prototype.Validate = function(){
+	var validObj={}
+	for(var i=0;i<this.board.length;i++){
+		for(var j=0;j<this.board[0].length;j++){
+			var current = this.board[i][j]
+			validObj[current] = validObj[current] + 1 || 1;	
+		}
+		if(Object.keys(validObj).length !== 9){
+			return false
+		}
+		for(key in validObj){
+			if(validObj[key] !== 1){
+				return false
+			}
+		}
+		validObj = {};
+	}	
+	return true;
+}
+
+console.log(new Sudoku().Validate())
